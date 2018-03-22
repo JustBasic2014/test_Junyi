@@ -16,7 +16,7 @@ def reverse(string):
 
 ------
 
-2.(B)
+1.(B)
 def reverse_sentence(sentence):
     if sentence is None or len(sentence) == 0:
         return ""
@@ -29,3 +29,21 @@ def reverse_sentence(sentence):
     result = ' '.join(temp_list)
 
     return result
+
+------
+
+2.
+def common_multiple(num):
+    count = 0
+
+    for i in range(num):
+        if i % 3 == 0 and i % 5 == 0:
+            count += 1
+        elif i % 3 == 0:
+            continue
+        elif i % 5 == 0:
+            continue
+        else:
+            count += 1
+
+    return count
