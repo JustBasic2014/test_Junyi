@@ -1,0 +1,16 @@
+1. (A)
+
+def reverse(string):
+    temp = list(string)
+
+    left = 0
+    right = len(temp)-1
+
+    while left <= right:
+        temp[left], temp[right] = temp[right], temp[left]
+        left += 1
+        right -= 1
+
+    result = ''.join(temp)
+
+    return result
