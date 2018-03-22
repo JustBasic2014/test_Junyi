@@ -1,5 +1,4 @@
 1. (A)
-
 def reverse(string):
     temp = list(string)
 
@@ -12,5 +11,21 @@ def reverse(string):
         right -= 1
 
     result = ''.join(temp)
+
+    return result
+
+------
+
+2.(B)
+def reverse_sentence(sentence):
+    if sentence is None or len(sentence) == 0:
+        return ""
+        
+    temp_list = sentence.split(" ")
+
+    for i in range(len(temp_list)):
+        temp_list[i] = reverse(temp_list[i])
+
+    result = ' '.join(temp_list)
 
     return result
